@@ -1,2 +1,2 @@
-# Multi-SSH
-It is a program to run commands an many hosts via SSH
+# Multi SSH
+It is a program for executing commands on multiple devices that are SSH capable.
