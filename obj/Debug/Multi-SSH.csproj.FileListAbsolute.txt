@@ -10,3 +10,14 @@ D:\OneDrive - Stadt Köln\Abschlussprojekt\Multi-SSH\Multi-SSH\obj\Debug\Multi-S
 D:\OneDrive - Stadt Köln\Abschlussprojekt\Multi-SSH\Multi-SSH\bin\Debug\Renci.SshNet.dll
 D:\OneDrive - Stadt Köln\Abschlussprojekt\Multi-SSH\Multi-SSH\bin\Debug\Renci.SshNet.xml
 D:\OneDrive - Stadt Köln\Abschlussprojekt\Multi-SSH\Multi-SSH\obj\Debug\Multi_SSH.UeberUns.resources
+C:\Users\Michael\Source\Repos\Multi-SSH\bin\Debug\Multi-SSH.exe.config
+C:\Users\Michael\Source\Repos\Multi-SSH\bin\Debug\Multi-SSH.exe
+C:\Users\Michael\Source\Repos\Multi-SSH\bin\Debug\Multi-SSH.pdb
+C:\Users\Michael\Source\Repos\Multi-SSH\bin\Debug\Renci.SshNet.xml
+C:\Users\Michael\Source\Repos\Multi-SSH\obj\Debug\Multi-SSH.csprojResolveAssemblyReference.cache
+C:\Users\Michael\Source\Repos\Multi-SSH\obj\Debug\Multi_SSH.Hauptfenster.resources
+C:\Users\Michael\Source\Repos\Multi-SSH\obj\Debug\Multi_SSH.Properties.Resources.resources
+C:\Users\Michael\Source\Repos\Multi-SSH\obj\Debug\Multi_SSH.UeberUns.resources
+C:\Users\Michael\Source\Repos\Multi-SSH\obj\Debug\Multi-SSH.csproj.GenerateResource.Cache
+C:\Users\Michael\Source\Repos\Multi-SSH\obj\Debug\Multi-SSH.exe
+C:\Users\Michael\Source\Repos\Multi-SSH\obj\Debug\Multi-SSH.pdb
