@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using System.Data;
-using Microsoft.VisualBasic.FileIO; // This namespace usage is important or else TextFieldParser method will lead to error
+using Microsoft.VisualBasic.FileIO;
 using System.IO;
 
 namespace Multi_SSH

@@ -147,7 +147,10 @@ namespace Multi_SSH
                 progressBar.Maximum = dataGridViewCsv.Rows.Count;
                 progressBar.Step = 1;
                 #endregion
+
                 #region Import To DataView
+
+
                 dataGridViewCsv.Rows[0].Selected = true;
                 if (dataGridViewCsv.SelectedCells.Count > 0)
                 {
@@ -165,44 +168,22 @@ namespace Multi_SSH
                         PingReply pingHost = ping.Send(hostname);
                         if (pingHost.Status.ToString().Equals("Success"))
                         {
-                            var client = new SshClient(hostname, username, password);
+                            var host = new SshClient(hostname, username, password);
 
-                            client.Connect();
-                            ergebnisRichTextBox.SelectionColor = Color.Blue;
-                            ergebnisRichTextBox.SelectionFont = new Font("Tahoma", 18, FontStyle.Regular);
-                            ergebnisRichTextBox.SelectionAlignment = HorizontalAlignment.Center;
-                            ergebnisRichTextBox.AppendText($"------------------------------ {hostname}------------------------------\n");
+                            host.Connect();
+                            WriteInResult(hostname, "Hostname");
 
                             for (int w = 0; w < befehleListBox.Items.Count; w++)
                             {
-
-                                var comando = client.RunCommand(befehleListBox.Items[w].ToString());
-                                ergebnisRichTextBox.SelectionColor = Color.Blue;
-                                ergebnisRichTextBox.SelectionFont = new Font("Tahoma", 10, FontStyle.Regular);
-                                ergebnisRichTextBox.SelectionAlignment = HorizontalAlignment.Left;
-                                ergebnisRichTextBox.AppendText($"Command: " + comando.CommandText+"\n");
-                                ergebnisRichTextBox.SelectionColor = Color.Green;
-                                ergebnisRichTextBox.SelectionFont = new Font("Tahoma", 10, FontStyle.Regular);
-                                ergebnisRichTextBox.SelectionAlignment = HorizontalAlignment.Left;
-                                ergebnisRichTextBox.AppendText(comando.Result);
+                                var command = host.RunCommand(befehleListBox.Items[w].ToString());
+                                WriteInResult(command.CommandText, "Command");
+                                WriteInResult(command.Result, "Result");
                             }
-
-
-                            //richTextBox1.SelectionFont = new Font("Verdana", 12, FontStyle.Bold);
-
-
-                            client.Disconnect();
+                            host.Disconnect();
                         }
                         else
                         {
-                            ergebnisRichTextBox.SelectionColor = Color.Red;
-                            ergebnisRichTextBox.SelectionFont = new Font("Tahoma", 18, FontStyle.Regular);
-                            ergebnisRichTextBox.SelectionAlignment = HorizontalAlignment.Center;
-                            ergebnisRichTextBox.AppendText($"------------------------------ {hostname}------------------------------\n");
-                            ergebnisRichTextBox.SelectionFont = new Font("Tahoma", 10, FontStyle.Regular);
-                            ergebnisRichTextBox.SelectionAlignment = HorizontalAlignment.Left;
-                            ergebnisRichTextBox.SelectionColor = Color.Red;
-                            ergebnisRichTextBox.AppendText($"Der Host ist gerade nicht erreichbar\n");
+                            WriteInResult(hostname, "Error");
                             MessageBox.Show($"Der Host {hostname} ist nicht erreichbar!", "Achtung", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
 
@@ -247,7 +228,49 @@ namespace Multi_SSH
         }
         #endregion
 
-        
+        #region Write in Result
+        private void WriteInResult(string ausgabe, string ausgabeArt)
+        {
+
+            switch (ausgabeArt)
+            {
+                case "Hostname":
+
+                    ergebnisRichTextBox.SelectionColor = Color.Blue;
+                    ergebnisRichTextBox.SelectionFont = new Font("Tahoma", 18, FontStyle.Regular);
+                    ergebnisRichTextBox.SelectionAlignment = HorizontalAlignment.Center;
+                    ergebnisRichTextBox.AppendText($"------------------------------ {ausgabe}------------------------------\n");
+                    break;
+
+                case "Command":
+                    ergebnisRichTextBox.SelectionColor = Color.Blue;
+                    ergebnisRichTextBox.SelectionFont = new Font("Tahoma", 10, FontStyle.Regular);
+                    ergebnisRichTextBox.SelectionAlignment = HorizontalAlignment.Left;
+                    ergebnisRichTextBox.AppendText($"Command: " + ausgabe + "\n");
+
+                    break;
+                case "Result":
+                    ergebnisRichTextBox.SelectionColor = Color.Green;
+                    ergebnisRichTextBox.SelectionFont = new Font("Tahoma", 10, FontStyle.Regular);
+                    ergebnisRichTextBox.SelectionAlignment = HorizontalAlignment.Left;
+                    ergebnisRichTextBox.AppendText(ausgabe);
+                    break;
+                case "Error":
+
+                    ergebnisRichTextBox.SelectionColor = Color.Red;
+                    ergebnisRichTextBox.SelectionFont = new Font("Tahoma", 18, FontStyle.Regular);
+                    ergebnisRichTextBox.SelectionAlignment = HorizontalAlignment.Center;
+                    ergebnisRichTextBox.AppendText($"------------------------------ {ausgabe}------------------------------\n");
+                    ergebnisRichTextBox.SelectionFont = new Font("Tahoma", 10, FontStyle.Regular);
+                    ergebnisRichTextBox.SelectionAlignment = HorizontalAlignment.Left;
+                    ergebnisRichTextBox.SelectionColor = Color.Red;
+                    ergebnisRichTextBox.AppendText($"Der Host ist gerade nicht erreichbar\n");
+                    break;
+
+            }
+
+        }
+        #endregion
     }
     #endregion
 }
