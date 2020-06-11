@@ -51,7 +51,7 @@ namespace Multi_SSH
         private void HilfeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Go to user manual file
-            Process.Start(@"D:\OneDrive - Stadt Köln\Abschlussprojekt\Multi-SSH\Multi-SSH\Resources\User-Manual.pdf");
+            Process.Start(@"https://michael-bedros.de/Dokumentationen/User-Manual.pdf");
         }
         
         #endregion
