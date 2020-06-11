@@ -226,9 +226,11 @@ namespace Multi_SSH
             try
             {
                 #region variables
+                //FileDialog object
                 SaveFileDialog saveFile;
                 #endregion
                 #region Save File
+                //Open filedialog to save the result
                 saveFile = new SaveFileDialog();
                 saveFile.DefaultExt = "*.rtf";
                 saveFile.Filter = "RTF Files|*.rtf";
@@ -253,7 +255,7 @@ namespace Multi_SSH
             switch (ausgabeArt)
             {
                 case "Hostname":
-
+                    //Write the hostname into Ergebnisbox
                     ergebnisRichTextBox.SelectionColor = Color.Blue;
                     ergebnisRichTextBox.SelectionFont = new Font("Tahoma", 18, FontStyle.Regular);
                     ergebnisRichTextBox.SelectionAlignment = HorizontalAlignment.Center;
@@ -261,6 +263,7 @@ namespace Multi_SSH
                     break;
 
                 case "Command":
+                    //Write the command into Ergebnisbox
                     ergebnisRichTextBox.SelectionColor = Color.Blue;
                     ergebnisRichTextBox.SelectionFont = new Font("Tahoma", 10, FontStyle.Regular);
                     ergebnisRichTextBox.SelectionAlignment = HorizontalAlignment.Left;
@@ -268,13 +271,14 @@ namespace Multi_SSH
 
                     break;
                 case "Result":
+                    //Write the result into Ergebnisbox
                     ergebnisRichTextBox.SelectionColor = Color.Green;
                     ergebnisRichTextBox.SelectionFont = new Font("Tahoma", 10, FontStyle.Regular);
                     ergebnisRichTextBox.SelectionAlignment = HorizontalAlignment.Left;
                     ergebnisRichTextBox.AppendText(ausgabe);
                     break;
                 case "Error":
-
+                    //Write the error into Ergebnisbox
                     ergebnisRichTextBox.SelectionColor = Color.Red;
                     ergebnisRichTextBox.SelectionFont = new Font("Tahoma", 18, FontStyle.Regular);
                     ergebnisRichTextBox.SelectionAlignment = HorizontalAlignment.Center;

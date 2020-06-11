@@ -61,7 +61,6 @@
             this.dataGridViewCsv.Location = new System.Drawing.Point(12, 27);
             this.dataGridViewCsv.Name = "dataGridViewCsv";
             this.dataGridViewCsv.Size = new System.Drawing.Size(470, 249);
-            this.dataGridViewCsv.TabIndex = 1;
             // 
             // Hostname
             // 
@@ -86,7 +85,7 @@
             this.importHostsButton.Location = new System.Drawing.Point(12, 284);
             this.importHostsButton.Name = "importHostsButton";
             this.importHostsButton.Size = new System.Drawing.Size(470, 23);
-            this.importHostsButton.TabIndex = 2;
+            this.importHostsButton.TabIndex = 1;
             this.importHostsButton.Text = "Import Hosts (.csv)";
             this.importHostsButton.UseVisualStyleBackColor = true;
             this.importHostsButton.Click += new System.EventHandler(this.importHostsButton_Click);
@@ -97,14 +96,13 @@
             this.befehleListBox.Location = new System.Drawing.Point(500, 27);
             this.befehleListBox.Name = "befehleListBox";
             this.befehleListBox.Size = new System.Drawing.Size(470, 251);
-            this.befehleListBox.TabIndex = 3;
             // 
             // importBefehleButton
             // 
             this.importBefehleButton.Location = new System.Drawing.Point(500, 284);
             this.importBefehleButton.Name = "importBefehleButton";
             this.importBefehleButton.Size = new System.Drawing.Size(470, 23);
-            this.importBefehleButton.TabIndex = 4;
+            this.importBefehleButton.TabIndex = 2;
             this.importBefehleButton.Text = "Import Befehle (.txt)";
             this.importBefehleButton.UseVisualStyleBackColor = true;
             this.importBefehleButton.Click += new System.EventHandler(this.importBefehleButton_Click);
@@ -114,7 +112,6 @@
             this.ergebnisRichTextBox.Location = new System.Drawing.Point(12, 313);
             this.ergebnisRichTextBox.Name = "ergebnisRichTextBox";
             this.ergebnisRichTextBox.Size = new System.Drawing.Size(958, 224);
-            this.ergebnisRichTextBox.TabIndex = 5;
             this.ergebnisRichTextBox.Text = "";
             // 
             // ausfuehrenButton
@@ -122,7 +119,7 @@
             this.ausfuehrenButton.Location = new System.Drawing.Point(12, 572);
             this.ausfuehrenButton.Name = "ausfuehrenButton";
             this.ausfuehrenButton.Size = new System.Drawing.Size(470, 23);
-            this.ausfuehrenButton.TabIndex = 6;
+            this.ausfuehrenButton.TabIndex = 3;
             this.ausfuehrenButton.Text = "Ausführen";
             this.ausfuehrenButton.UseVisualStyleBackColor = true;
             this.ausfuehrenButton.Click += new System.EventHandler(this.ausfuehrenButton_Click);
@@ -132,7 +129,7 @@
             this.speichernButton.Location = new System.Drawing.Point(500, 572);
             this.speichernButton.Name = "speichernButton";
             this.speichernButton.Size = new System.Drawing.Size(467, 23);
-            this.speichernButton.TabIndex = 7;
+            this.speichernButton.TabIndex = 4;
             this.speichernButton.Text = "Ergebnis speichern";
             this.speichernButton.UseVisualStyleBackColor = true;
             this.speichernButton.Click += new System.EventHandler(this.speichernButton_Click);

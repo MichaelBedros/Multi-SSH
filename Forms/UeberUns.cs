@@ -18,11 +18,13 @@ namespace Multi_SSH
         #region Links
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            //Go to Michael website
             System.Diagnostics.Process.Start("https://michael-bedros.de");
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            //Go to Xing Profile of Michael
             System.Diagnostics.Process.Start("https://www.xing.com/profile/Michael_Bedros/");
         }
 #endregion
