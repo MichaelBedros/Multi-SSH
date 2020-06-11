@@ -14,37 +14,46 @@ namespace Multi_SSH
         #region Forms
         public Hauptfenster()
         {
+            // Intializing the Components
             InitializeComponent();
 
         }
         #endregion
 
         #region Menu
-        private void UeberUnsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            UeberUns ueberUns = new UeberUns();
-            ueberUns.Show();
-        }
-        private void SchliessenToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-        private void HilfeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Process.Start(@"D:\OneDrive - Stadt Köln\Abschlussprojekt\Multi-SSH\Multi-SSH\Resources\User-Manual.pdf");
-        }
         private void EntleerenToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Clear DataView rows
             int counterDataView = dataGridViewCsv.RowCount - 2;
             for (int i = counterDataView; i >= 0; i--)
             {
                 dataGridViewCsv.Rows.RemoveAt(i);
             }
+            //Clear Befehl ListBox items
             befehleListBox.Items.Clear();
+            //Clear 
             ergebnisRichTextBox.Clear();
+            //Reset the Progress Bar
             progressBar.Value = 1;
 
         }
+        private void UeberUnsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Go to "Über uns" windows form
+            UeberUns ueberUns = new UeberUns();
+            ueberUns.Show();
+        }
+        private void SchliessenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Exit the programm
+            Application.Exit();
+        }
+        private void HilfeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Go to user manual file
+            Process.Start(@"D:\OneDrive - Stadt Köln\Abschlussprojekt\Multi-SSH\Multi-SSH\Resources\User-Manual.pdf");
+        }
+        
         #endregion
 
         #region Buttons
@@ -73,21 +82,30 @@ namespace Multi_SSH
             try
             {
                 #region variables
+                //Object variable for open the file explorer
                 OpenFileDialog openFile;
+                //Ojekt variable for the import the hosts
                 ImportCsv csv;
                 #endregion
 
                 #region Open File
+                // Create a new objekt from "OpenFileDialog" class
                 openFile = new OpenFileDialog();
+                //Filter for impprting just csv files
                 openFile.Filter = "CSV files (*.csv)|*.csv";
+                //Title the file explorer
                 openFile.Title = "Import der Hosts";
                 #endregion
 
                 #region Import CSV To DataView
+                //Check if the user has selected a file
                 if (openFile.ShowDialog() == System.Windows.Forms.DialogResult.OK && openFile.FileName.Length > 0)
                 {
+                    //Clear the list of hosts
                     dataGridViewCsv.Columns.Clear();
+                    //Create a new objekt form "ImportCSV" class
                     csv = new ImportCsv(openFile.FileName);
+                    //Return the import value to the list of hosts
                     dataGridViewCsv.DataSource = csv.importCsv;
                 }
                 #endregion
