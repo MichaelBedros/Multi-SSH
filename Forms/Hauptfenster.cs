@@ -1,4 +1,16 @@
-﻿using System;
+﻿/* Dieses Programm wurde von Michael Bederos
+ * 
+ * GitHub:      https://github.com/MichaelBedros/Multi-SSH
+ * Homepage:    https://michael-bedros.de/
+ * Schule:      http://gso-koeln.de/
+ * 
+ * Datum: 11.06.2020
+ * 
+ * Info:
+ * Dieses Programm wurde mit Hile daer 'Renci SshNet' Bibliothek geschrieben. Diese ist in NutGet zu finden
+ */
+
+using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
