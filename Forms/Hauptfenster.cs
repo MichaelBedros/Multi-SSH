@@ -1,4 +1,4 @@
-﻿/* Dieses Programm wurde von Michael Bederos
+﻿/* Dieses Programm wurde von Michael Bederos geschrieben
  * 
  * GitHub:      https://github.com/MichaelBedros/Multi-SSH
  * Homepage:    https://michael-bedros.de/

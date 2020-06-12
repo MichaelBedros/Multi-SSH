@@ -21,3 +21,7 @@ C:\Users\Michael\Source\Repos\Multi-SSH\obj\Debug\Multi_SSH.UeberUns.resources
 C:\Users\Michael\Source\Repos\Multi-SSH\obj\Debug\Multi-SSH.csproj.GenerateResource.Cache
 C:\Users\Michael\Source\Repos\Multi-SSH\obj\Debug\Multi-SSH.exe
 C:\Users\Michael\Source\Repos\Multi-SSH\obj\Debug\Multi-SSH.pdb
+C:\Users\Michael\Source\Repos\Multi-SSH\bin\Debug\Multi-SSH.exe.manifest
+C:\Users\Michael\Source\Repos\Multi-SSH\bin\Debug\Multi-SSH.application
+C:\Users\Michael\Source\Repos\Multi-SSH\obj\Debug\Multi-SSH.exe.manifest
+C:\Users\Michael\Source\Repos\Multi-SSH\obj\Debug\Multi-SSH.application
